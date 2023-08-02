@@ -23,8 +23,8 @@ class Employee:
     def get_number(self):
         return self.__number
     
-# The ProducerWorker class holds specific information about the role
-class ProducerWorker:
+# The ProductionWorker class holds specific information about the role
+class ProductionWorker(Employee):
     
     # Initalize object with the attributes name, number, shift number, and hourly pay rate
     def __init__(self, name, number, shift_number, hourly_pay_rate):
