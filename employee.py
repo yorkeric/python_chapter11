@@ -49,32 +49,32 @@ class ProductionWorker(Employee):
     def get_hourly_pay_rate(self):
         return self.__hourly_pay_rate
     
-    class ShiftSupervisor(Employee):
+class ShiftSupervisor(Employee):
         
-        # Initalize object with the attributes name, number, annual salary, and annual production bonus
-        def __init__(self, name, number, annual_salary, annual_production_bonus):
-            # Initalize the superclass with the name and number            
-            Employee.__init__(self, name, number)
-            self.__annual_salary = annual_salary
-            self.__annual_production_bonus = annual_production_bonus
+    # Initalize object with the attributes name, number, annual salary, and annual production bonus
+    def __init__(self, name, number, annual_salary, annual_production_bonus):
+        # Initalize the superclass with the name and number            
+        Employee.__init__(self, name, number)
+        self.__annual_salary = annual_salary
+        self.__annual_production_bonus = annual_production_bonus
         
-        # Set the annual salary attribute
-        def set_annual_salary(self, annual_salary):
-            self.__annual_salary = annual_salary
+    # Set the annual salary attribute
+    def set_annual_salary(self, annual_salary):
+        self.__annual_salary = annual_salary
         
-        # Set the annual production bonus attribute
-        def set_annual_production_bonus(self, annual_production_bonus):
-            self.__annual_production_bonus = annual_production_bonus
+    # Set the annual production bonus attribute
+    def set_annual_production_bonus(self, annual_production_bonus):
+        self.__annual_production_bonus = annual_production_bonus
         
-        # Get the annual salary attribute
-        def get_annual_salary(self):
-            return self.__annual_salary
+    # Get the annual salary attribute
+    def get_annual_salary(self):
+        return self.__annual_salary
 
-        # Get the annual production bonus attribute
-        def get_annual_production_bonus(self):
-            return self.__annual_production_bonus
+    # Get the annual production bonus attribute
+    def get_annual_production_bonus(self):
+        return self.__annual_production_bonus
         
-        # String method to print the labels and attributes
-        def __str__(self):
-            return "Name: " + self.__name + "\nNumber: " + self.__number + "\Annual Salary: " + self.__annual_salary + "\Annual Production Bonus: " + self.__annual_production_bonus        
+    # String method to print the labels and attributes
+    def __str__(self):
+        return "Name: " + super().get_name() + "\nNumber: " + super().get_number() + "\nAnnual Salary: $" + self.__annual_salary + "\nAnnual Production Bonus: $" + self.__annual_production_bonus        
         
